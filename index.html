@@ -2,4 +2,29 @@
 <head></head>
 
 <body>test</body>
+  <script>
+
+  var constraints = {
+    audio: true,
+    video: {
+      width: {exact: 1280},
+      height: {exact: 720}
+    }
+  };
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(function(stream) {
+      //Play the media stream in the video element
+     navigator.mediaDevices.enumerateDevices().then(dvs=>{
+     dvs.forEach((dv) => {
+				const div = document.createElement('div');
+        const br = document.createElement('br');
+        div.innerText = `${dv.kind} - ${dv.deviceId} - ${dv.label}`;
+        document.body.appendChild(div);
+       document.body.appendChild(br);
+        });
+     })
+    })
+    .catch(function(error) {
+    });
+  </script>
 </httml>
