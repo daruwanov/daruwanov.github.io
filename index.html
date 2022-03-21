@@ -2,6 +2,7 @@
 	<head><title>111-test</title></head>
 
 <body>Test Share
+	<div id="error"></div>
  <script>
 	 
 	  try {
@@ -12,6 +13,7 @@
                     };
                     await navigator.share(shareData);
                 } catch (err) {
+document.getElementById('error').append('ddsdfdsf')
                     //TODO: Possibly todo something
                 }
 
