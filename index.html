@@ -12,6 +12,7 @@
                         url: 'https://developer.mozilla.org',
                     };
                     navigator.share(shareData);
+		  document.getElementById('error').append('works')
                 } catch (err) {
 document.getElementById('error').append(err.message)
                     //TODO: Possibly todo something
